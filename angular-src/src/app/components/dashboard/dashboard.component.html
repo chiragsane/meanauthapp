@@ -1,0 +1,180 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Qualifications
+      <span class="glyphicon glyphicon-collapse-up pull-right" #qualPanelBody (click)="collapseQualPanel()"></span>
+  </h3>
+  </div>
+ <!-- <popup (confirmClick)="onCreateQual()" #popupAdd>
+    <form>
+      <div class="form-group">
+        <label for="qualificationName">Qualification:</label>
+        <input type="text" [(ngModel)]="qualificationName" name="qualificationName" class="form-control" placeholder="Qualification">
+      </div>
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="text" [(ngModel)]="year" name="year" placeholder="Year" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="college">College:</label>
+        <input type="text" [(ngModel)]="college" name="college" placeholder="College" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="university">University:</label>
+        <input type="text" [(ngModel)]="university" name="university" placeholder="University" class="form-control">
+      </div>
+    </form>
+  </popup>
+  <popup (confirmClick)="onEditQual()" #popupEdit>
+    <form>
+      <div class="form-group">
+        <label for="qualificationName">Qualification:</label>
+        <input type="text" class="form-control" placeholder="Qualification" [(ngModel)]="selQualificationName" name="selQualificationName">
+      </div>
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="text" placeholder="Year" class="form-control" [(ngModel)]="selYear" name="selYear">
+      </div>
+      <div class="form-group">
+        <label for="college">College:</label>
+        <input type="text" placeholder="College" class="form-control" [(ngModel)]="selCollege" name="selCollege">
+      </div>
+      <div class="form-group">
+        <label for="university">University:</label>
+        <input type="text" placeholder="University" class="form-control" [(ngModel)]="selUniversity" name="selUniversity">
+      </div>
+    </form>
+  </popup>
+  <popup (confirmClick)="onDelQual()" #popupDel>
+    Do you want to delete this record?
+  </popup>-->
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="createModal" role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">New Qualification</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Qualification Name</label>
+              <input type="text" [(ngModel)]="qualificationName" name="qualificationName" class="form-control" placeholder="Qualification">
+            </div>
+            <div class="form-group">
+              <label>Year</label>
+              <input type="text" [(ngModel)]="year" name="year" class="form-control" placeholder="Year">
+            </div>
+            <div class="form-group">
+              <label>School/College</label>
+              <input type="text" [(ngModel)]="college" name="college" class="form-control" placeholder="College">
+            </div>
+            <div class="form-group">
+              <label>University</label>
+              <input type="text" [(ngModel)]="university" name="university" class="form-control" placeholder="University">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onCreateQual()" data-dismiss="modal">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="editModal" role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Qualification</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Qualification Name</label>
+              <input type="text" [(ngModel)]="selQualificationName" name="selQualificationName" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Year</label>
+              <input type="text" [(ngModel)]="selYear" name="selYear" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>School/College</label>
+              <input type="text" [(ngModel)]="selCollege" name="selCollege" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>University</label>
+              <input type="text" [(ngModel)]="selUniversity" name="selUniversity" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onEditQual()" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="deleteModal" role="dialog">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Remove Qualification</h4>
+        </div>
+        <div class="modal-body">
+          <h3>Are you sure ?</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" (click)="onDelQual()" data-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <div class="panel-body" [hidden]="isCollapsedContent">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th class="col-xs-1 text-center">Actions</th>
+          <th class="col-xs-3 text-center">Name</th>
+          <th class="col-xs-2 text-center">Year</th>
+          <th class="col-xs-3 text-center">College</th>
+          <th class="col-xs-3 text-center">University</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="qualification">
+        <tr *ngFor="let qualificationObj of qualification;">
+          <td class="text-center" (click)="setQualData(qualificationObj)">
+            <button type="submit" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-pencil"  data-toggle="modal" data-target="#editModal"></span></button>
+            <button type="submit" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" data-toggle="modal" data-target="#deleteModal"></span></button>
+          </td>
+          <td class="col-xs-1 text-center">{{qualificationObj.qualificationName}}</td>
+          <td class="col-xs-1 text-center">{{qualificationObj.year}}</td>
+          <td class="col-xs-1 text-center">{{qualificationObj.college}}</td>
+          <td class="col-xs-1 text-center">{{qualificationObj.university}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="submit" class="btn btn-primary pull-right" value="Add"  data-toggle="modal" data-target="#createModal">
+    
+  </div>
+</div>

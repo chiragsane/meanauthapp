@@ -1,0 +1,16 @@
+<div *ngIf="user">
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">User Profile    
+      <span class="glyphicon glyphicon-collapse-up pull-right" #qualPanelBody (click)="collapseProfPanel()"></span>
+  </h3>
+  </div>
+  <div class="panel-body" [hidden]="isCollapsedContent">
+  <ul class="list-group">
+    <li class="list-group-item"><b>Username:</b> {{user.username}}</li>
+    <li class="list-group-item"><b>Email:</b> {{user.email}}</li>
+  </ul>
+  </div>
+    <button class="btn btn-sm" (click)="downloadFile()">File</button>
+  </div>
+</div>
